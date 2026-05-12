@@ -3,4 +3,3 @@ uvicorn[standard]
 httpx
 jinja2
 pydantic
-yt-dlp
