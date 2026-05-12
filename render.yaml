@@ -3,10 +3,7 @@ services:
     name: yt-downloader
     runtime: python
     plan: free
-    buildCommand: |
-      pip install -r requirements.txt
-      chmod +x install_ytdlp.sh
-      ./install_ytdlp.sh
+    buildCommand: pip install -r requirements.txt && chmod +x yt-dlp
     startCommand: python app.py
     envVars:
       - key: PYTHON_VERSION
