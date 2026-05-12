@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: yt-downloader
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      chmod +x install_ytdlp.sh
+      ./install_ytdlp.sh
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
